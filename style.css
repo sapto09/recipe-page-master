@@ -39,6 +39,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* main */
+main {
+    margin-bottom: 2em;
+}
 .hero--image {
     width: 100%;
     max-width: 100%;
@@ -205,6 +208,14 @@ div.flex--grow {
     height: 50px;
 }
 
+.source {
+    color: #bdbdbd;
+    margin: 1em auto;
+}
+.source a {
+    color: #bdbdbd;
+    font-style: italic;
+}
 
 /* footer */
 footer {
