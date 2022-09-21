@@ -6,6 +6,7 @@
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Playfair Display';
+    letter-spacing: .5px;
 }
 
 /* pengaturan UMUM */
@@ -91,4 +92,167 @@ div.flex--grow {
     font-weight: 500;
 }
 
-/* main --  */
+/* main -- .content */
+.content{
+    margin: 2.5em 0;
+}
+
+.subtitle {
+    font-size: 1.1325rem;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.gcc,.cheesecake {
+    margin-top: 1.5em;
+}
+.third-subtitle {
+    margin: .5em 0;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+/* styling checkbox */
+
+/* mengatur posisi dari setiap item */
+.ingredient__list--item {
+    display: block;
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-size: .875rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* mengatur posisi input:checkbox  */
+.ingredient__list--item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* mengatur tampilan default dari checked sebelum diberi input checked */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #ddd;
+}
+
+/* mengatur background input (dan juga) checked ketika mouse berada di atasnya */
+.ingredient__list--item:hover input ~ .checkmark {
+    background-color: #c9c3c3;    
+}
+
+/* mengatur background input ketika diberi checked  */
+.ingredient__list--item input:checked ~ .checkmark {
+    background-color: #f3a621;
+}
+
+/* menyembunyikan setiap tanda checked */
+.checkmark:after {
+    content: " ";
+    position: absolute;
+    display: none;
+}
+
+/* menampilkan yang seharusnya ketika diberi checked */
+.ingredient__list--item input:checked ~ .checkmark:after {
+    display: block;
+}
+.ingredient__list--item .checkmark:after {
+    left: 4.5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.instructions__row{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+
+.number {
+    font-weight: 700;
+    background-color: #F2994A;
+    color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.number p {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    font-size: 500;
+    color: #b5b0b0;
+}
+.instagram {
+    font-weight: 700;
+    text-decoration: none;
+    color: #F2994A;
+    opacity: .75;
+    transition: .3s;
+}
+.instagram:hover,  .instagram:focus{
+    color: greenyellow;
+}
+.instagram:visited {
+    color: #bdbdbd;
+}
+
+@media (min-width:960px) {
+    .container {
+        max-width: 900px;
+    }
+    .quote {
+        width: 60%;
+    }
+    .row {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .row__second-stage {
+        display: block;
+        width: 20%;
+        height: 230px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    .clearfix {
+        width: 100%;
+        margin: 1.5em 1em;
+
+    }
+    .content {
+        width: 70%;
+        margin-top: 0;
+    }
+}
